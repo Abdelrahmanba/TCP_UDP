@@ -28,7 +28,7 @@ public class TCP_Server {
                 BufferedReader inFormUser = new BufferedReader(new InputStreamReader(connectionSocket.getInputStream()));
                 receivedSentence=inFormUser.readLine();
                 System.out.printf("Received from client: %s",receivedSentence);
-                capitalizedSentence=receivedSentence.toUpperCase();
+                capitalizedSentence=receivedSentence.toUpperCase()+"\n";
                 DataOutputStream outToClient = new DataOutputStream(connectionSocket.getOutputStream());
                 outToClient.writeBytes(capitalizedSentence);
             }
