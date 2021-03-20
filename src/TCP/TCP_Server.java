@@ -11,8 +11,9 @@ import static java.lang.System.exit;
 
 public class TCP_Server {
     public static void main(String[] argv) {
-        ServerSocket listeningSocket = null;
         int portNo = 6789;
+
+        ServerSocket listeningSocket = null;
         String receivedSentence,capitalizedSentence;
 
         try {
